@@ -1,0 +1,244 @@
+{
+  "title": "Calcolo dei periodi di sospensione patente",
+  "description": "Prototipo navigabile per registrare pratiche inventate, calcolare le date teoriche di fine sospensione applicando il minimo edittale indicato dall’operatore e considerare periodi intermedi e presofferti. Verificare sempre la normativa applicabile e gli atti del caso: i risultati sono di supporto e non sostituiscono la valutazione dell’ufficio.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "cruscotto",
+      "title": "Cruscotto",
+      "description": "Panoramica delle pratiche fittizie e delle scadenze calcolate.",
+      "metrics": [
+        {
+          "label": "Pratiche aperte",
+          "value": "12"
+        },
+        {
+          "label": "Calcoli da verificare",
+          "value": "3"
+        },
+        {
+          "label": "Ritiri teoricamente maturati",
+          "value": "4"
+        },
+        {
+          "label": "Scadenze nei prossimi 7 giorni",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Codice pratica",
+        "Trasgressore",
+        "Decorrenza",
+        "Minimo applicato",
+        "Presofferto",
+        "Fine teorica",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "PAT-26041",
+          "Lumo Riva",
+          "2026-02-03",
+          "60 giorni",
+          "8 giorni",
+          "2026-03-26",
+          "Da verificare"
+        ],
+        [
+          "PAT-26042",
+          "Vela Neri",
+          "2026-01-18",
+          "90 giorni",
+          "0 giorni",
+          "2026-04-18",
+          "In corso"
+        ],
+        [
+          "PAT-26043",
+          "Nubi Sarti",
+          "2025-12-10",
+          "30 giorni",
+          "12 giorni",
+          "2025-12-28",
+          "Maturata"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "pratiche",
+      "title": "Pratiche di sospensione",
+      "description": "Cerca e filtra le pratiche; apri una riga per consultare il dettaglio e il calcolo.",
+      "metrics": [],
+      "columns": [
+        "Codice pratica",
+        "Trasgressore",
+        "Riferimento normativo",
+        "Decorrenza",
+        "Minimo applicato",
+        "Presofferto",
+        "Fine teorica",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "PAT-26041",
+          "Lumo Riva",
+          "Art. 142, comma 9",
+          "2026-02-03",
+          "60 giorni",
+          "8 giorni",
+          "2026-03-26",
+          "Da verificare"
+        ],
+        [
+          "PAT-26042",
+          "Vela Neri",
+          "Art. 218",
+          "2026-01-18",
+          "90 giorni",
+          "0 giorni",
+          "2026-04-18",
+          "In corso"
+        ],
+        [
+          "PAT-26043",
+          "Nubi Sarti",
+          "Art. 186, comma 2",
+          "2025-12-10",
+          "30 giorni",
+          "12 giorni",
+          "2025-12-28",
+          "Maturata"
+        ],
+        [
+          "PAT-26044",
+          "Timo Fari",
+          "Art. 142, comma 9",
+          "2026-02-21",
+          "60 giorni",
+          "0 giorni",
+          "2026-04-22",
+          "In corso"
+        ]
+      ],
+      "form": [
+        "Codice pratica",
+        "Trasgressore",
+        "Riferimento normativo",
+        "Decorrenza",
+        "Minimo applicato",
+        "Presofferto",
+        "Fine teorica",
+        "Stato"
+      ]
+    },
+    {
+      "id": "calcolo",
+      "title": "Nuovo calcolo",
+      "description": "Inserisci gli estremi essenziali e aggiungi gli intervalli di presofferto o le date intermedie risultanti dagli atti. Il calcolo mostra il conteggio adottato e segnala gli elementi da verificare.",
+      "metrics": [
+        {
+          "label": "Metodo",
+          "value": "Minimo edittale"
+        },
+        {
+          "label": "Intervalli conteggiati",
+          "value": "Per giorni effettivi"
+        }
+      ],
+      "columns": [
+        "Codice pratica",
+        "Trasgressore",
+        "Riferimento normativo",
+        "Decorrenza",
+        "Minimo applicato",
+        "Presofferto",
+        "Fine teorica",
+        "Stato"
+      ],
+      "rows": [],
+      "form": [
+        "Codice pratica",
+        "Trasgressore",
+        "Riferimento normativo",
+        "Decorrenza",
+        "Minimo applicato",
+        "Presofferto",
+        "Fine teorica",
+        "Stato"
+      ]
+    },
+    {
+      "id": "intervalli",
+      "title": "Periodi intermedi e presofferto",
+      "description": "Registra gli intervalli temporali desunti da provvedimenti o sentenze. La pratica collegata ricalcola la durata residua; controlla sovrapposizioni, estremi inclusi e decorrenza secondo gli atti e le regole applicabili.",
+      "metrics": [
+        {
+          "label": "Intervalli registrati",
+          "value": "9"
+        },
+        {
+          "label": "Sovrapposizioni da controllare",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Codice pratica",
+        "Trasgressore",
+        "Tipo intervallo",
+        "Dal",
+        "Al",
+        "Giorni conteggiati",
+        "Atto di riferimento",
+        "Esito controllo"
+      ],
+      "rows": [
+        [
+          "PAT-26041",
+          "Lumo Riva",
+          "Presofferto",
+          "2026-01-20",
+          "2026-01-27",
+          "8",
+          "Provvedimento intermedio",
+          "Da verificare"
+        ],
+        [
+          "PAT-26043",
+          "Nubi Sarti",
+          "Presofferto",
+          "2025-12-10",
+          "2025-12-21",
+          "12",
+          "Sentenza intermedia",
+          "Conteggiato"
+        ],
+        [
+          "PAT-26044",
+          "Timo Fari",
+          "Periodo intermedio",
+          "2026-02-21",
+          "2026-02-25",
+          "5",
+          "Provvedimento intermedio",
+          "Da verificare"
+        ]
+      ],
+      "form": [
+        "Codice pratica",
+        "Trasgressore",
+        "Tipo intervallo",
+        "Dal",
+        "Al",
+        "Giorni conteggiati",
+        "Atto di riferimento",
+        "Esito controllo"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "blu-istituzionale",
+    "fonts": "istituzionale"
+  }
+}
