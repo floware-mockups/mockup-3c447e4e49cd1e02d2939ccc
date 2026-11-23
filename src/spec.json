@@ -60,7 +60,7 @@
           "30 giorni",
           "12 giorni",
           "2025-12-28",
-          "Maturata"
+          "Chiusa agli atti"
         ]
       ],
       "form": []
@@ -109,7 +109,7 @@
           "30 giorni",
           "12 giorni",
           "2025-12-28",
-          "Maturata"
+          "Chiusa agli atti"
         ],
         [
           "PAT-26044",
@@ -294,11 +294,11 @@
   },
   "custom": [
     {
-      "name": "PeriodiEvidenziati",
-      "title": "Periodi evidenziati",
-      "description": "Rappresenta in rosso gli intervalli su una scala temporale comune.",
+      "name": "ChiusuraAutomaticaSospensioni",
+      "title": "Chiusura automatica delle sospensioni",
+      "description": "Aggiorna gli stati delle pratiche con fine teorica trascorsa nelle due pagine.",
       "role": "section",
-      "position": "table"
+      "position": "top"
     }
   ]
 }
